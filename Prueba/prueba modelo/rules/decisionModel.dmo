@@ -22,11 +22,26 @@
                 <input bomType="java.lang.String" collection="false" name="Entrada"/>
                 <output bomType="java.lang.String" collection="false" name="Decisión"/>
                 <rule defaultRule="false" href="node_1/reglas.dmt" kind="DecisionTable" name="reglas"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Decisión" typeRef="java.lang.String"/>
         <informationRequirement>
             <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_2" name="Decisión 2">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="Decisión"/>
+                <output bomType="java.lang.String" collection="false" name="Decisión 2"/>
+                <rule defaultRule="false" href="node_2/denegado.drl" kind="BusinessRule" name="denegado"/>
+                <rule defaultRule="false" href="node_2/denegado_1.dmt" kind="DecisionTable" name="denegado_1"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Decisión 2" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
         </informationRequirement>
     </decision>
 </definitions>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>denegado_1</name>
+  <uuid>81e42045-d196-4f2d-b074-939931c5e733</uuid>
+  <locale>es_ES</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[Decisión es <una cadena de caracteres>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[asignar a decisión <una cadena de caracteres>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["denegado"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["denegado"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="es_ES">
+        <ResourceSet Locale="es_ES">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Decisión]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Decisión 2]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>
